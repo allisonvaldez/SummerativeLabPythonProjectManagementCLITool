@@ -24,7 +24,7 @@ class Task:
     # Create a function for when a task is completed and print a confirmation message
     def complete(self):
         self.status = "complete"
-        print(f"✅ Task '{self.title}' marked as complete.")
+        print(f"Task '{self.title}' marked as complete.")
 
     # Create a class method
     @classmethod

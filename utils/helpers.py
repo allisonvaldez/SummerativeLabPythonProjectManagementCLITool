@@ -5,8 +5,8 @@ from rich.console import Console
 # Create a console instance for rich output
 console = Console()
 
+# Create a function to display users in a formatted table
 def print_users(users):
-    """Display users in a formatted table using rich"""
     # Create a table with columns
     table = Table(title="Users")
     table.add_column("ID", style="cyan")
@@ -17,8 +17,9 @@ def print_users(users):
         table.add_row(str(user.id), user.name, user.email)
     console.print(table)
 
+
+# Create a function to display projects in a formatted table
 def print_projects(projects):
-    """Display projects in a formatted table using rich"""
     table = Table(title="Projects")
     table.add_column("ID", style="cyan")
     table.add_column("Title", style="green")
@@ -36,8 +37,8 @@ def print_projects(projects):
         )
     console.print(table)
 
+# Create a function to display tasks in a formatted table
 def print_tasks(tasks):
-    """Display tasks in a formatted table using rich"""
     table = Table(title="Tasks")
     table.add_column("ID", style="cyan")
     table.add_column("Title", style="green")
