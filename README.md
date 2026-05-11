@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python3 main.py add-user --name "Allison" --email "allison@email.com"
 
 # Add a project
-python3 main.py add-project --user "Alice" --title "CLI Tool" --description "My project" --due-date "2026-12-01"
+python3 main.py add-project --user "Allison" --title "CLI Tool" --description "My project" --due-date "2026-12-01"
 
 # Add a task
 python3 main.py add-task --project "CLI Tool" --title "Write tests" --assigned-to "Alice"
@@ -24,7 +24,7 @@ python3 main.py add-task --project "CLI Tool" --title "Write tests" --assigned-t
 python3 main.py list-users
 
 # List projects
-python3 main.py list-projects --user "Alice"
+python3 main.py list-projects --user "Allison"
 
 # List tasks
 python3 main.py list-tasks --project "CLI Tool"
