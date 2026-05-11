@@ -7,7 +7,7 @@ def save_data(filepath, data):
     # Save the list of dictionaries to the JSON file
     try:
         # Open the file in write mode and place the data as formatted JSON
-        with open()filepath, "w") as f:
+        with open(filepath, "w") as f:
             json.dump(data, f, indent=4)
     except:
         # Perform error handling 

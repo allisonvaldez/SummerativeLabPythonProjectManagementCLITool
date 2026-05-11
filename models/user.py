@@ -23,7 +23,7 @@ class User(Person):
         # Unique id needs to be linked to the counter
         self.id = User.id_counter
         User.id_counter += 1
-        # Create an list of project for users
+        # Create a list of projects for users
         self.projects = []
         # Place user at the class level for the list
         User.all.append(self)
@@ -33,7 +33,7 @@ class User(Person):
     # Create a function for user name
     def name(self):
         # Getter
-        return self.name
+        return self._name
     
     # Create function and setter for name
     @name.setter
@@ -68,16 +68,15 @@ class User(Person):
     
     # Create a classmethod
     @classmethod
-    @name.setter
     # Create a function to search for a user
-    def find_user(cls, name):
+    def find_by_name(cls, name):
         for user in cls.all:
             if user.name == name:
                 return user
-            return None
+        return None
     
     # Create a function to convert data for JSON
-    def convert_dict_to_JSON(self):
+    def to_dict(self):
         return {
             "id": self.id,
             "name": self.name,
